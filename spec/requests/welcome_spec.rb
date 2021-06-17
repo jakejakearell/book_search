@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "Welcome Page" do
   describe 'Happy Paths' do
     it "will send an message telling users to go to READ-ME for endpoints" do
