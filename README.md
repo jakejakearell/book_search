@@ -2,7 +2,7 @@
 
 ## About
 
-* A RESTful API analyzing the books on the New York Times best-sellers list
+* A RESTful API analyzing the books on the New York Times fiction best-sellers list. Sort by weeks on list and filter by books performance 
 
 ## Local Setup
 **Version Requirements**
@@ -26,9 +26,15 @@
 ## Running the test suite
 The tests are all built using the [RSpec](https://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara) test suites.
 
-- run the test suite: `bundle exec rspec`
-- Assesses the data structure of any APIs consumed or exposed 
-- Reaches 100% on with simple cov
+- To run the full test suite run the below in your terminal:
+```
+$ bundle exec rspec
+```
+- To run an individual test file run the below in tour terminal:
+```
+$ bundle exec rspec <file path>
+```
+for example: `bundle exec rspec spec/requests/api/v1/book_search_request_spec.rb`
 
 ## Endpoints
 
@@ -142,6 +148,10 @@ Response body:
     ]
 }
 ```
+## Search Table
+
+A straightforward check in the facade once the 
+
 ## Tools
 Book Search is written in Ruby with Ruby on Rails and uses a PostgreSQL database.
 
@@ -164,3 +174,11 @@ Book Search is written in Ruby with Ruby on Rails and uses a PostgreSQL database
 ** Third Party APIs
 * New York Times
    * [Image search API - GET image](https://developer.nytimes.com/docs/books-product/1/overview)
+
+## Reflections
+- Could have used more performative queries. NYT Book API would only returned 15 books so this did not become a priority but would be an issue with scaling in the future 
+
+   I also think that indexing on the search table would have been useful for performance if I am checking for the presence of a search in my db whenever someone uses this service 
+- Controller is pretty clean 
+- Would have liked to had a more robust search function but some of the data didn't seem correct when coming back from the API so opted for simple and working 
+- Caching would probably be the next feature I would try and implement. After that probably allow for non-fiction searches and to search previous dates
