@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe "Fiction book search endpoint" do
-
   describe "Happy Path" do
     it "returns a current list of the top 15 best sellers w/o queries params" do
       VCR.use_cassette('happy_path_ficton_no_params') do
@@ -37,7 +36,7 @@ RSpec.describe "Fiction book search endpoint" do
 
     it "can sort books by number of weeks of on the best sellers list " do
       VCR.use_cassette('happy_path_weeks_on_list') do
-        get "/api/v1/fiction_best_sellers?weeks_on_list=true"
+        get "/api/v1/fiction_best_sellers?weeks_on_list=trUe"
         body = JSON.parse(response.body, symbolize_names: true)
         expect(response).to be_successful
         expect(response.status).to eq(200)
@@ -104,7 +103,7 @@ RSpec.describe "Fiction book search endpoint" do
         expect(body).to have_key(:data)
         expect(body[:data]).to be_a(Array)
         expect(body[:data].count).to_not eq(15)
-        require "pry"; binding.pry
+
         most_weeks_on_chart = body[:data].first[:attributes][:weeks_on_list]
         body[:data].each do |book|
           book_rank = book[:attributes][:rank]
@@ -118,24 +117,31 @@ RSpec.describe "Fiction book search endpoint" do
   end
 
   describe "Sad Path and Edge Case" do
-    xit "returns an error if an users asks for rising and falling books" do
-      get "/api/v1/fiction_best_sellers/rank_falling=true&rank_falling=true"
+    it "returns an error if an users asks for rising and falling books" do
+      VCR.use_cassette('sad_path_two_params') do
+        get "/api/v1/fiction_best_sellers?rank_falling=true&rank_rising=true"
 
-      data = JSON.parse(response.body, symbolize_names: true)
-
-      expect(response).to_not be_successful
-      expect(response.status).to eq(404)
-
+        book = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to_not be_successful
+        expect(response.status).to eq(400)
+        expect(book).to be_a(Hash)
+        expect(book.keys).to eq([:error])
+        expect(book[:error]).to eq("Can't include by rank_rising and rank_falling")
+      end
     end
 
-    xit "returns an error if an users doesn't provide true or false for query" do
-      get "/api/v1/fiction_best_sellers/rank_falling=123"
+    it "returns an error if an users doesn't provide true or false for query" do
 
-      data = JSON.parse(response.body, symbolize_names: true)
+      VCR.use_cassette('sad_path_two_params') do
+        get "/api/v1/fiction_best_sellers?rank_falling=123"
 
-      expect(response).to_not be_successful
-      expect(response.status).to eq(404)
-
+        book = JSON.parse(response.body, symbolize_names: true)
+        expect(response).to_not be_successful
+        expect(response.status).to eq(400)
+        expect(book).to be_a(Hash)
+        expect(book.keys).to eq([:error])
+        expect(book[:error]).to eq("Must search by 'true' or 'false'")
+      end
     end
   end
 end
