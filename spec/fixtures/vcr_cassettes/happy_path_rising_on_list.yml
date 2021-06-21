@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nytimes.com/svc/books/v3/lists.json?api-key=BxGxnKikZ0NHirPPiGJ1rfCUydrlVM8r&list=combined-print-and-e-book-fiction
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Jun 2021 16:43:43 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Apache/2.4.38 (Debian)
+      X-Powered-By:
+      - PHP/7.4.13
+      Via:
+      - 1.1 google, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-sea4480-SEA
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1624293823.778031,VS0,VE158
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Length, X-JSON
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"OK","copyright":"Copyright (c) 2021 The New York Times Company.  All
+        Rights Reserved.","num_results":15,"last_modified":"2021-06-16T22:07:39-04:00","results":[{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":1,"rank_last_week":0,"weeks_on_list":1,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0316540714?tag=NYTBSREV-20","isbns":[{"isbn10":"0316540714","isbn13":"9780316540711"},{"isbn10":"0316540730","isbn13":"9780316540735"}],"book_details":[{"title":"THE
+        PRESIDENT''S DAUGHTER","description":"Matthew Keating, a past president and
+        former Navy SEAL, goes on his own to find his abducted teenage daughter.","contributor":"by
+        Bill Clinton and James Patterson","author":"Bill Clinton and James Patterson","contributor_note":"","price":"0.00","age_group":"","publisher":"Little,
+        Brown","primary_isbn13":"9780316540711","primary_isbn10":"0316540714"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":2,"rank_last_week":2,"weeks_on_list":2,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0316420085?tag=NYTBSREV-20","isbns":[{"isbn10":"0316420085","isbn13":"9780316420082"}],"book_details":[{"title":"GOLDEN
+        GIRL","description":"A Nantucket novelist gets one final summer to watch what
+        happens from the great beyond.","contributor":"by Elin Hilderbrand","author":"Elin
+        Hilderbrand","contributor_note":"","price":"0.00","age_group":"","publisher":"Little,
+        Brown","primary_isbn13":"9780316420082","primary_isbn10":"0316420085"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":3,"rank_last_week":0,"weeks_on_list":1,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0593188136?tag=NYTBSREV-20","isbns":[{"isbn10":"0593188136","isbn13":"9780593188132"},{"isbn10":"0593188152","isbn13":"9780593188156"}],"book_details":[{"title":"TOM
+        CLANCY: TARGET ACQUIRED","description":"A cushy assignment to help the C.I.A.
+        puts Jack Ryan Jr. in the sights of trained killers.","contributor":"by Don
+        Bentley","author":"Don Bentley","contributor_note":"","price":"0.00","age_group":"","publisher":"Putnam","primary_isbn13":"9780593188156","primary_isbn10":"0593188152"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":4,"rank_last_week":4,"weeks_on_list":6,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1501171348?tag=NYTBSREV-20","isbns":[{"isbn10":"1501171348","isbn13":"9781501171345"},{"isbn10":"1501171364","isbn13":"9781501171369"},{"isbn10":"1797124749","isbn13":"9781797124742"}],"book_details":[{"title":"THE
+        LAST THING HE TOLD ME","description":"Hannah Hall discovers truths about her
+        missing husband and bonds with his daughter from a previous relationship.","contributor":"by
+        Laura Dave","author":"Laura Dave","contributor_note":"","price":"0.00","age_group":"","publisher":"Simon
+        & Schuster","primary_isbn13":"9781501171345","primary_isbn10":"1501171348"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":5,"rank_last_week":3,"weeks_on_list":2,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1524798657?tag=NYTBSREV-20","isbns":[{"isbn10":"1524798657","isbn13":"9781524798659"},{"isbn10":"1524798665","isbn13":"9781524798666"}],"book_details":[{"title":"MALIBU
+        RISING","description":"Four famous siblings throw an epic party to celebrate
+        the end of summer. But over the course of 24 hours, their lives will change
+        forever.","contributor":"by Taylor Jenkins Reid","author":"Taylor Jenkins
+        Reid","contributor_note":"","price":"0.00","age_group":"","publisher":"Ballantine","primary_isbn13":"9781524798659","primary_isbn10":"1524798657"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":6,"rank_last_week":8,"weeks_on_list":134,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/Where-Crawdads-Sing-Delia-Owens\/dp\/0735219095?tag=NYTBSREV-20","isbns":[{"isbn10":"0735219095","isbn13":"9780735219090"},{"isbn10":"0735219117","isbn13":"9780735219113"},{"isbn10":"0525640371","isbn13":"9780525640370"},{"isbn10":"0593105419","isbn13":"9780593105412"},{"isbn10":"0593187989","isbn13":"9780593187982"},{"isbn10":"0525640363","isbn13":"9780525640363"},{"isbn10":"0735219109","isbn13":"9780735219106"}],"book_details":[{"title":"WHERE
+        THE CRAWDADS SING","description":"In a quiet town on the North Carolina coast
+        in 1969, a young woman who survived alone in the marsh becomes a murder suspect.","contributor":"by
+        Delia Owens","author":"Delia Owens","contributor_note":"","price":"0.00","age_group":"","publisher":"Putnam","primary_isbn13":"9780735219106","primary_isbn10":"0735219109"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":7,"rank_last_week":10,"weeks_on_list":7,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0385547684?tag=NYTBSREV-20","isbns":[{"isbn10":"0385547684","isbn13":"9780385547680"},{"isbn10":"0385547714","isbn13":"9780385547710"},{"isbn10":"0593459288","isbn13":"9780593459287"}],"book_details":[{"title":"SOOLEY","description":"Samuel
+        Sooleymon receives a basketball scholarship to North Carolina Central and
+        determines to bring his family over from a civil war-ravaged South Sudan.","contributor":"by
+        John Grisham","author":"John Grisham","contributor_note":"","price":"0.00","age_group":"","publisher":"Doubleday","primary_isbn13":"9780385547680","primary_isbn10":"0385547684"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":8,"rank_last_week":1,"weeks_on_list":2,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1728251036?tag=NYTBSREV-20","isbns":[{"isbn10":"1728251036","isbn13":"9781728251035"}],"book_details":[{"title":"FREED","description":"The
+        final chapter of the Fifty Shades as Told by Christian trilogy delves into
+        the wedding between Christian Grey and Anastasia Steele.","contributor":"by
+        E.L. James","author":"E.L. James","contributor_note":"","price":"0.00","age_group":"","publisher":"Bloom","primary_isbn13":"9781728251035","primary_isbn10":"1728251036"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":9,"rank_last_week":6,"weeks_on_list":6,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0593135202?tag=NYTBSREV-20","isbns":[{"isbn10":"0593135202","isbn13":"9780593135204"},{"isbn10":"0593135210","isbn13":"9780593135211"}],"book_details":[{"title":"PROJECT
+        HAIL MARY","description":"Ryland Grace awakes from a long sleep alone and
+        far from home, and the fate of humanity rests on his shoulders.","contributor":"by
+        Andy Weir","author":"Andy Weir","contributor_note":"","price":"0.00","age_group":"","publisher":"Ballantine","primary_isbn13":"9780593135204","primary_isbn10":"0593135202"}],"reviews":[{"book_review_link":"https:\/\/www.nytimes.com\/2021\/05\/04\/books\/review\/andy-weir-project-hail-mary.html","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":10,"rank_last_week":11,"weeks_on_list":28,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/0525559477?tag=NYTBSREV-20","isbns":[{"isbn10":"0525559477","isbn13":"9780525559474"},{"isbn10":"0525559485","isbn13":"9780525559481"},{"isbn10":"0655697071","isbn13":"9780655697077"}],"book_details":[{"title":"THE
+        MIDNIGHT LIBRARY","description":"Nora Seed finds a library beyond the edge
+        of the universe that contains books with multiple possibilities of the lives
+        one could have lived.","contributor":"by Matt Haig","author":"Matt Haig","contributor_note":"","price":"0.00","age_group":"","publisher":"Viking","primary_isbn13":"9780525559474","primary_isbn10":"0525559477"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":11,"rank_last_week":7,"weeks_on_list":3,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1250272939?tag=NYTBSREV-20","isbns":[{"isbn10":"1250272939","isbn13":"9781250272935"},{"isbn10":"1250272947","isbn13":"9781250272942"},{"isbn10":"1250802350","isbn13":"9781250802354"}],"book_details":[{"title":"LEGACY","description":"Threats
+        put in rhymes and sent from shifting locations escalate as the daughter of
+        a successful fitness celebrity\u2019s own yoga business grows.","contributor":"by
+        Nora Roberts","author":"Nora Roberts","contributor_note":"","price":"0.00","age_group":"","publisher":"St.
+        Martin''s","primary_isbn13":"9781250272935","primary_isbn10":"1250272939"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":12,"rank_last_week":9,"weeks_on_list":5,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1984806750?tag=NYTBSREV-20","isbns":[{"isbn10":"1984806750","isbn13":"9781984806758"},{"isbn10":"1984806769","isbn13":"9781984806765"}],"book_details":[{"title":"PEOPLE
+        WE MEET ON VACATION","description":"Opposites Poppy and Alex meet to vacation
+        together one more time in hopes of saving their relationship.","contributor":"by
+        Emily Henry","author":"Emily Henry","contributor_note":"","price":"0.00","age_group":"","publisher":"Berkley","primary_isbn13":"9781984806758","primary_isbn10":"1984806750"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":13,"rank_last_week":14,"weeks_on_list":41,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/Silent-Patient-Alex-Michaelides\/dp\/1250301696?tag=NYTBSREV-20","isbns":[{"isbn10":"1250301696","isbn13":"9781250301697"},{"isbn10":"1250301718","isbn13":"9781250301710"},{"isbn10":"1250317541","isbn13":"9781250317544"},{"isbn10":"1432858645","isbn13":"9781432858643"},{"isbn10":"125030170X","isbn13":"9781250301703"}],"book_details":[{"title":"THE
+        SILENT PATIENT","description":"Theo Faber looks into the mystery of a famous
+        painter who stops speaking after shooting her husband.","contributor":"by
+        Alex Michaelides","author":"Alex Michaelides","contributor_note":"","price":"0.00","age_group":"","publisher":"Celadon","primary_isbn13":"9781250301703","primary_isbn10":"125030170X"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":14,"rank_last_week":15,"weeks_on_list":19,"asterisk":0,"dagger":0,"amazon_product_url":"https:\/\/www.amazon.com\/dp\/1250178606?tag=NYTBSREV-20","isbns":[{"isbn10":"1250178606","isbn13":"9781250178602"},{"isbn10":"1250178622","isbn13":"9781250178626"},{"isbn10":"1250317258","isbn13":"9781250317254"},{"isbn10":"1643588230","isbn13":"9781643588230"}],"book_details":[{"title":"THE
+        FOUR WINDS","description":"As dust storms roll during the Great Depression,
+        Elsa must choose between saving the family and farm or heading West.","contributor":"by
+        Kristin Hannah","author":"Kristin Hannah","contributor_note":"","price":"0.00","age_group":"","publisher":"St.
+        Martin''s","primary_isbn13":"9781250178602","primary_isbn10":"1250178606"}],"reviews":[{"book_review_link":"","first_chapter_link":"","sunday_review_link":"","article_chapter_link":""}]},{"list_name":"Combined
+        Print and E-Book Fiction","display_name":"Combined Print & E-Book Fiction","bestsellers_date":"2021-06-12","published_date":"2021-06-27","rank":15,"rank_last_week":0,"weeks_on_list":10,"asterisk":0,"dagger":0,"amazon_product_url":"http:\/\/www.amazon.com\/The-Song-Achilles-A-Novel\/dp\/0062060627?tag=NYTBSREV-20","isbns":[{"isbn10":"","isbn13":""},{"isbn10":"0062060619","isbn13":"9780062060617"},{"isbn10":"0062060627","isbn13":"9780062060624"},{"isbn10":"0062060635","isbn13":"9780062060631"},{"isbn10":"1408818906","isbn13":"9781408818909"}],"book_details":[{"title":"THE
+        SONG OF ACHILLES","description":"A reimagining of Homer\u2019s \u201cIliad\u201d
+        that is narrated by Achilles'' companion Patroclus.","contributor":"by Madeline
+        Miller","author":"Madeline Miller","contributor_note":"","price":"0.00","age_group":"","publisher":"Ecco","primary_isbn13":"9780062060624","primary_isbn10":"0062060627"}],"reviews":[{"book_review_link":"https:\/\/www.nytimes.com\/2012\/04\/29\/books\/review\/the-song-of-achilles-by-madeline-miller.html","first_chapter_link":"","sunday_review_link":"https:\/\/www.nytimes.com\/2012\/04\/29\/books\/review\/the-song-of-achilles-by-madeline-miller.html","article_chapter_link":""}]}]}'
+  recorded_at: Mon, 21 Jun 2021 16:43:43 GMT
+recorded_with: VCR 6.0.0

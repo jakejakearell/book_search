@@ -8,7 +8,11 @@ RSpec.describe 'Book Service' do
 
         expect(service).to be_a(Hash)
         expect(service.count).to eq(5)
-        expect(service.keys).to eq([:status, :copyright, :num_results, :last_modified, :results])
+        expect(service.keys).to eq([:status,
+                                    :copyright,
+                                    :num_results,
+                                    :last_modified,
+                                    :results])
         expect(service[:status]).to be_a(String)
         expect(service[:copyright]).to be_a(String)
         expect(service[:num_results]).to be_a(Integer)
@@ -36,6 +40,13 @@ RSpec.describe 'Book Service' do
           expect(book[:rank]).to be_a(Integer)
           expect(book[:rank_last_week]).to be_a(Integer)
           expect(book[:weeks_on_list]).to be_a(Integer)
+          expect(book[:book_details]).to be_a(Array)
+          expect(book[:book_details].count).to eq(1)
+          expect(book[:book_details].first).to be_a(Hash)
+          expect(book[:book_details].first).to have_key(:title)
+          expect(book[:book_details].first[:title]).to be_a(String)
+          expect(book[:book_details].first).to have_key(:author)
+          expect(book[:book_details].first[:author]).to be_a(String)
         end
       end
     end
