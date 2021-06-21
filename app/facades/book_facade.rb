@@ -16,7 +16,7 @@ class BookFacade
       @error_message = "Must search by 'true' or 'false'"
       false
     else
-      # save_search?
+      save_search?
       true
     end
   end
@@ -78,10 +78,10 @@ class BookFacade
       )
     end
   end
-  #
-  # def save_search?
-  #   if !Search.find_by
-  #     Search.create(query)
-  #   end
-  # end
+
+  def save_search?
+    if !Search.find_by(@query)
+      Search.create(@query)
+    end
+  end
 end
