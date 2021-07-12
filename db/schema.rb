@@ -21,11 +21,4 @@ ActiveRecord::Schema.define(version: 2021_06_21_213456) do
     t.boolean "weeks_on_list"
   end
 
-  create_table "searchs", force: :cascade do |t|
-    t.boolean "rank_rising"
-    t.boolean "rank_falling"
-    t.boolean "weeks_on_list"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 end
