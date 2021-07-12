@@ -1,8 +1,18 @@
 class BookService
-  def self.fiction_best_sellers
-    response = conn.get("svc/books/v3/lists.json?") do |request|
+  def self.service_call
+    conn.get("svc/books/v3/lists.json?") do |request|
       request.params['list'] = 'combined-print-and-e-book-fiction'
     end
+  end
+
+  def self.fiction_cache
+    Rails.cache.fetch("fiction_list", :expires_in => 1.week) do
+      service_call
+    end
+  end
+
+  def self.fiction_best_sellers
+    response = fiction_cache
     parser(response.body)
   end
 
